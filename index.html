@@ -18,12 +18,15 @@
 
         <div id="app" class="container py-3">
             <h1>MAIL - POSTA</h1>
+            <button class="btn btn-primary" @click="generaMailRandom">mail</button>
             <p>la mail è: </p>
             <ul>
-                <li>
-                </li>
+                <li 
+                v-for=" (response, index) in mailRandom
+                 "
+                 :key="index">{{ response }}</li>
             </ul>
-            <button class="btn btn-primary" @click="generaMailRandom">mail</button>
+            
         </div>
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js'
